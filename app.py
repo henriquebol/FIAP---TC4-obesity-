@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 
 # --- Carregar modelo e artefatos ---
-with open('model\obesity_model.pkl', 'rb') as f:
+with open('model/obesity_model.pkl', 'rb') as f:
     data = pickle.load(f)
 
 model = data['model']
