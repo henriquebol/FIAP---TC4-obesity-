@@ -63,21 +63,30 @@ elif page == "Insights e Métricas":
 
     st.markdown("### 🔹 Comparação de Acurácia entre Modelos")
     try:
-        img_comp = Image.open("data/model_comparison.png")
+        img_comp = Image.open("graph/model_comparison.png")
         st.image(img_comp, caption="Comparação de Acurácia entre os Modelos", use_container_width=True)
     except:
         st.warning("Imagem de comparação não encontrada. Execute o script de treinamento novamente.")
 
     st.markdown("### 🔹 Matriz de Confusão do Melhor Modelo")
+
     try:
-        img_conf = Image.open("data/confusion_matrix.png")
+        img_conf = Image.open("graph/feature_importance.png")
+        st.image(img_conf, caption="Importância das entradas", use_container_width=True)
+    except:
+        st.warning("Não encontrada. Execute o script de treinamento novamente.")
+
+    st.markdown("### 🔹Importância das entradas")
+
+    try:
+        img_conf = Image.open("graph/confusion_matrix.png")
         st.image(img_conf, caption="Matriz de Confusão do Melhor Modelo", use_container_width=True)
     except:
         st.warning("Matriz de confusão não encontrada. Execute o script de treinamento novamente.")
 
     st.markdown("### 🔹 Correlação entre Variáveis")
     try:
-        img_corr = Image.open("data/correlation_heatmap.png")
+        img_corr = Image.open("graph/correlation_heatmap.png")
         st.image(img_corr, caption="Mapa de Correlação entre Variáveis", use_container_width=True)
     except:
         st.warning("Mapa de correlação não encontrado.")
