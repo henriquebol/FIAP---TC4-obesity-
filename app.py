@@ -68,7 +68,7 @@ elif page == "Insights e Métricas":
     except:
         st.warning("Imagem de comparação não encontrada. Execute o script de treinamento novamente.")
 
-    st.markdown("### 🔹 Matriz de Confusão do Melhor Modelo")
+    st.markdown("### 🔹 Importância das entradas")
 
     try:
         img_conf = Image.open("graphs/feature_importance.png")
@@ -76,7 +76,7 @@ elif page == "Insights e Métricas":
     except:
         st.warning("Não encontrada. Execute o script de treinamento novamente.")
 
-    st.markdown("### 🔹Importância das entradas")
+    st.markdown("### 🔹Matriz de Confusão do Melhor Modelo (Gradient Boosting)")
 
     try:
         img_conf = Image.open("graphs/confusion_matrix.png")
