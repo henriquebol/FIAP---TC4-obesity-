@@ -9,7 +9,7 @@ def run_analise_page():
     st.set_page_config(layout="wide")
     st.title("📊 Insights e Análise de métricas")
 
-    tab1, tab2, tab3, tab4 = st.tabs(["📈**Análise de Correlação**", "🎯**Análise de Boxplots**", "📉**Análise de Distribuição**", "**CONCLUSÃO**"],)
+    tab1, tab2, tab3, tab4 = st.tabs(["📈**Análise de Correlação**", "🎯**Análise de Boxplots**", "📉**Análise de Distribuição**", "💡**CONCLUSÃO**"],)
     
     with tab1:
         st.markdown("#### 🔹 Correlação entre as características dos entrevistados (Mapa de Calor)")
@@ -26,7 +26,7 @@ def run_analise_page():
                         *   **FAVC** (Consumo frequente de alimentos hipercalóricos) apresentou a maior correlação absoluta negativa com **Obesidade**, indicando que pessoas que não consomem frequentemente alimentos hipercalóricos tendem a ter menor obesidade ou peso normal. No entanto, o **LabelEncoder** pode ter invertido o sentido original da correlação, então é importante revisar a interpretação dos valores codificados. Se 'não' foi codificado como 0 e 'sim' como 1, então uma correlação negativa significaria que 'não' (0) está associado a níveis mais altos de obesidade, o que seria contraintuitivo. Reavaliar a codificação é crucial aqui.
                         *   **Idade** mostrou uma correlação positiva, sugerindo que, em geral, indivíduos mais velhos tendem a apresentar maiores níveis de obesidade.
                         *   **NCP** (Número de refeições principais) e **FCVC** (Frequência de consumo de vegetais) apresentaram correlações negativas. Para **NCP**, menos refeições principais podem estar associadas a níveis mais altos de obesidade. Para **FCVC**, um menor consumo de vegetais está associado a maiores níveis de obesidade.
-                        *   **CALC** (Consumo de álcool) também mostrou uma correlação negativa, o que, dependendo da codificação, pode indicar que um maior consumo de álcool está associado a menores níveis de obesidade, ou vice-versa. A codificação 'nao', 'As_vezes', 'Frequentemente', 'Sempre' (0,1,2,3) foi feita em ordem crescente, então uma correlação negativa sugere que quanto maior o consumo de álcool, menor o nível de obesidade, o que também pode ser um ponto para reflexão sobre a complexidade da relação.
+                        *   **CALC** (Consumo de álcool) mostrou uma correlação positiva, isso indica que um maior consumo de álcool está associado a maiores níveis de obesidade.
                                 ''')
         except:
             st.warning("Imagem de comparação não encontrada. Execute o script de treinamento novamente.")
