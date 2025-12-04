@@ -21,7 +21,7 @@ def run_previsao_page():
 
     # --- Página 1: Previsão ---
     #if page == "Previsão de Obesidade":
-        #st.title("🏥 Preditor de Nível de Obesidade")
+    st.title("🏥 Preditor de Nível de Obesidade")
     st.markdown("Responda as perguntas abaixo para estimar o nível de obesidade:")
 
     user_input = {}
